@@ -1,0 +1,47 @@
+[
+  {
+    "id": "sample-1",
+    "title": "Design project homepage",
+    "description": "Prepare the initial layout and visual direction.",
+    "assignee": "Alex",
+    "dueDate": "2026-11-25",
+    "status": "InProgress",
+    "createdAt": "2026-11-15T09:00:00.000Z"
+  },
+  {
+    "id": "sample-2",
+    "title": "Set up API endpoints",
+    "description": "Create and test the task management endpoints.",
+    "assignee": "Sam",
+    "dueDate": "2026-11-27",
+    "status": "Pending",
+    "createdAt": "2026-11-16T09:00:00.000Z"
+  },
+  {
+    "id": "sample-3",
+    "title": "Review requirements",
+    "description": "Confirm the project scope with the team.",
+    "assignee": "Jordan",
+    "dueDate": "2026-11-20",
+    "status": "Completed",
+    "createdAt": "2026-11-14T09:00:00.000Z"
+  },
+  {
+    "id": "73febd42-7319-4a83-b677-5ed5871a0142",
+    "title": "aptitude",
+    "description": "",
+    "assignee": "",
+    "dueDate": "",
+    "status": "Completed",
+    "createdAt": "2026-11-18T03:35:45.764Z"
+  },
+  {
+    "id": "045b924b-0807-4492-8c07-5702b1f05cfc",
+    "title": "projectt",
+    "description": "online application",
+    "assignee": "dineshh",
+    "dueDate": "2026-12-04",
+    "status": "Pending",
+    "createdAt": "2026-11-18T08:31:24.806Z"
+  }
+]
