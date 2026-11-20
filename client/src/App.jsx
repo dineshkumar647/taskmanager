@@ -45,7 +45,7 @@ function App() {
     if (!form.title.trim()) return;
     setSaving(true);
     try {
-      const response = awaitfetch(`${API_URL}/api/tasks`, {
+      const response = await fetch(`${API_URL}/api/tasks`, {
         method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form)
       });
       const data = await response.json();
