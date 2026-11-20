@@ -3,6 +3,7 @@ import { Activity, CheckCircle2, CircleDashed, ClipboardList, Plus, Search, Tras
 
 const STATUSES = ["Pending", "InProgress", "Completed"];
 const initialForm = { title: "", description: "", assignee: "", dueDate: "" };
+const API_URL = "https://task-sgtg.onrender.com";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -17,7 +18,7 @@ function App() {
   async function loadTasks() {
     try {
       setError("");
-      const response = await fetch("/api/tasks");
+      const response = await fetch(`${API_URL}/api/tasks`)
       if (!response.ok) throw new Error("Unable to load tasks.");
       setTasks(await response.json());
     } catch (err) {
@@ -44,7 +45,7 @@ function App() {
     if (!form.title.trim()) return;
     setSaving(true);
     try {
-      const response = await fetch("/api/tasks", {
+      const response = awaitfetch(`${API_URL}/api/tasks`, {
         method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form)
       });
       const data = await response.json();
@@ -58,7 +59,7 @@ function App() {
 
   async function updateStatus(id, status) {
     try {
-      const response = await fetch(`/api/tasks/${id}`, {
+      const response = await fetch(`${API_URL}/api/tasks/${id}`, {
         method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ status })
       });
       const data = await response.json();
@@ -70,7 +71,7 @@ function App() {
   async function deleteTask(id) {
     if (!window.confirm("Delete this task?")) return;
     try {
-      const response = await fetch(`/api/tasks/${id}`, { method: "DELETE" });
+      const response = await fetch(`${API_URL}/api/tasks/${id}`, { method: "DELETE" })
       if (!response.ok) throw new Error("Could not delete task.");
       setTasks(current => current.filter(task => task.id !== id));
     } catch (err) { setError(err.message); }
